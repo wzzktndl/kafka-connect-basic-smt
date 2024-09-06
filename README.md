@@ -24,7 +24,7 @@ mvn clean package
 4. **Restart Kafka Connect service and look for logging like this**:
 ```shell
 connect            | [2024-09-25 12:01:00,459] INFO Added plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCase' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
-connect            | [2024-09-25 12:01:01,463] INFO Added alias 'Wrap' to plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCase' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
+connect            | [2024-09-25 12:01:01,463] INFO Added alias 'ChangeCase' to plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCase' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
 ```
 
 ## Feature
