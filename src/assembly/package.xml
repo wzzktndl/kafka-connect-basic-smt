@@ -5,9 +5,9 @@
     <!-- Assembles a packaged version targeting OS installation. -->
     <id>package</id>
     <formats>
-        <format>dir</format>
+        <format>zip</format>
     </formats>
-    <includeBaseDirectory>true</includeBaseDirectory>
+    <includeBaseDirectory>false</includeBaseDirectory>
     <baseDirectory>mfec-${project.artifactId}-${project.version}</baseDirectory>
     <fileSets>
         <fileSet>
