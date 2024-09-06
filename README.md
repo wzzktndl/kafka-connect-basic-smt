@@ -21,7 +21,7 @@ mvn clean package
 4. **Restart Kafka Connect service and look for logging like this**:
 ```shell
 connect            | [2024-09-25 12:01:00,459] INFO Added plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCase' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
-connect            | [2024-09-25 12:01:01,463] INFO Added alias 'Wrap' to plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCse' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
+connect            | [2024-09-25 12:01:01,463] INFO Added alias 'Wrap' to plugin 'com.github.wzzktndl.kafka.connect.smt.ChangeCase' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader)
 ```
 
 ## Feature
@@ -29,6 +29,41 @@ connect            | [2024-09-25 12:01:01,463] INFO Added alias 'Wrap' to plugin
 |-------------|----------|------------------------|---------------------------------------------------------------------------------------------|
 | ChangeCase  | Key      | No                     | Change case for specific field e.g. Uppercase or Lowercase, Working fine with nested field. |
 | ChangeCase  | Value    | No                     | Change case for specific field e.g. Uppercase or Lowercase, Working fine with nested field.                                                    |
+
+## ChangeCase
+```Text
+"transforms.ChangeCase.type": "com.github.wzzktndl.kafka.connect.smt.ChangeCase$Key"
+"transforms.ChangeCase.type": "com.github.wzzktndl.kafka.connect.smt.ChangeCase$Value"
+```
+* `fields.list` : List of fields (String with comma separate).
+* `case` : Case type (Uppercase or Lowercase).
+### Usage
+```text
+"transforms.ChangeCase.type": "com.github.wzzktndl.kafka.connect.smt.ChangeCase$Value"
+"transforms.ChangeCase.fields.list": "name,lastname,uppercase",
+"transforms.ChangeCase.case": "Lowercase"
+```
+### Input
+```json
+{
+  "name" : "NAME",
+  "lastname" : "lastname",
+  "objects" : {
+     "uppercase" : "THIS IS UPPERCASE TEXT"
+  }
+}
+```
+### Output
+```json
+{
+  "name" : "name",
+  "lastname" : "lastname",
+   "objects" : {
+      "uppercase" : "this is uppercase text"
+   }
+}
+```
+---
 
 ## Roadmap
 Upcoming feature are:
