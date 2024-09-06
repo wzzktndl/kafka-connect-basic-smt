@@ -1,3 +1,6 @@
+![Build Status](https://github.com/wzzktndl/kafka-connect-basic-smt/actions/workflows/maven.yml/badge.svg)
+![GitHub License](https://img.shields.io/github/license/wzzktndl/kafka-connect-basic-smt)
+
 # Kafka Connect Basic Transformation (SMT)
 
 ## Overview
