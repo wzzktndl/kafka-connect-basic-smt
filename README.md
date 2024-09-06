@@ -1,5 +1,6 @@
 ![Build Status](https://github.com/wzzktndl/kafka-connect-basic-smt/actions/workflows/maven.yml/badge.svg)
 ![GitHub License](https://img.shields.io/github/license/wzzktndl/kafka-connect-basic-smt)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=wzzktndl_kafka-connect-basic-smt&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=wzzktndl_kafka-connect-basic-smt)
 
 # Kafka Connect Basic Transformation (SMT)
 
