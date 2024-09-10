@@ -37,10 +37,10 @@ jobs:
     - name: SonarCloud Scan
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar \
-          -Dsonar.projectKey=wzzktndl_kafka-connect-basic-smt \
-          -Dsonar.organization=wzzktndl \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      run: mvn sonar:sonar \
+        -Dsonar.projectKey=wzzktndl_kafka-connect-basic-smt \
+        -Dsonar.organization=wzzktndl \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
     - name: JaCoCo Coverage
       run: mvn jacoco:report
