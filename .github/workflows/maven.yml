@@ -43,4 +43,4 @@ jobs:
     - name: Sonar scanner
       run: mvn sonar:sonar \
         -Dsonar.projectKey=wzzktndl_kafka-connect-basic-smt \
-        -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        -Dsonar.login=${{ secrets.SONAR_TOKEN }}
